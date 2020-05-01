@@ -1,0 +1,8 @@
+Hello
+This message was created for testing purposes only.
+.
+..
+...
+....
+q.
+.q
