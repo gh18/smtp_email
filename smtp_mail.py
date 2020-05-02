@@ -21,7 +21,7 @@ Script to send emails from your registered [yandex.ru] account using SMTP Protoc
     +-------------------------------------------------------------------------------+
     |                    USAGE: python3 smtp_mail.py -i                             |
     |                 HELP: smtp_mail.py [--help, -h, -help]                        |
-    |            current server: smtp.yandex.ru :: current port: 465                |
+    |           current server: smtp.yandex.ru :: current port: 465                 |
     +-------------------------------------------------------------------------------+
 """
 
@@ -65,7 +65,7 @@ def read_pict(item):
 
 
 def create_msg():
-    """Creates message"""
+    """Creates a message"""
     head = ''
     head += 'From: ' + USR_NAME + '\n'
     head += 'To: ' + RCPT + '\n'
@@ -132,3 +132,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
 
     except (ssl.SSLError, OSError) as ex:
         print('Errors occurred:' + str(ex))
+
+# TODO: - multiple recipients (add a for statement or add a BCC header)
+# TODO: - cleaner message composition
+# TODO: - option to select an smtp-server
