@@ -21,6 +21,7 @@ Script to send emails from your registered [yandex.ru] account using SMTP Protoc
     +-------------------------------------------------------------------------------+
     |                    USAGE: python3 smtp_mail.py -i                             |
     |                 HELP: smtp_mail.py [--help, -h, -help]                        |
+    |            current server: smtp.yandex.ru :: current port: 465                |
     +-------------------------------------------------------------------------------+
 """
 
