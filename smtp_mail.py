@@ -7,6 +7,9 @@ import os
 import getpass
 from pathlib import Path
 
+"""
+Корнеев Михаил, КН-203 (ИЕНиМ-280208)
+"""
 
 USR_NAME = ''   # 'testingIProtocols@yandex.ru'
 PSWD = ''       # '11_02&?'
@@ -14,10 +17,10 @@ RCPT = ''       # 'someone@example.com'
 
 help_args = {'--help', '-h', '-help'}
 help_message = """
-     Script to send emails from your registered account using SMTP Protocol directly
+Script to send emails from your registered [yandex.ru] account using SMTP Protocol directly
     +-------------------------------------------------------------------------------+
-    |                    USAGE: python3 smtp_protocol.py -i                         |
-    |                 HELP: smtp_protocol.py [--help, -h, -help]                    |
+    |                    USAGE: python3 smtp_mail.py -i                             |
+    |                 HELP: smtp_mail.py [--help, -h, -help]                        |
     +-------------------------------------------------------------------------------+
 """
 
@@ -86,7 +89,7 @@ def create_msg():
                         f'\nContent-Type: image/png; name="{read_pict(item)[1]}"' + '\n' + '\n'
                 body += read_pict(item)[0] + '\n'
         except TypeError as exc:
-            print('Error occurred: ', exc)
+            print('Error occurred: ', str(exc))
 
     body += '--' + boundary + '--' + '\n'
     body += '.' + '\n'
