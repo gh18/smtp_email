@@ -10,7 +10,6 @@ def request(socket_, request):
     return received_data
 
 
-# тут впиши данные своего ящика (пользователь и пароль)
 host_address = 'smtp.yandex.ru'
 port = 465
 user_name = 'testingIProtocols@yandex.ru'
@@ -45,9 +44,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
         print(request(client, base64login))
         print(request(client, base64pswd))
 
-# тут адрес своего ящика вместо моего и адрес получателя в RCPT TO:
         print(request(client, 'MAIL FROM:testingIProtocols@yandex.ru'))
-        print(request(client, 'RCPT TO:'))
+        print(request(client, 'RCPT TO:random.urls@gmail.com'))
         print(request(client, 'DATA'))
     # except (ssl.SSLError, OSError) as ex:
     #     print('Authentication failed:' + str(ex))
