@@ -61,4 +61,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
         print('Errors occurred:' + str(ex))
 
 # TODO: connection errors -> +
-#       MIME attachments
+#       MIME attachments -> done in smtp_mail.py
